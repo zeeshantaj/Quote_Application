@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="@dimen/margin10"
+    app:cardCornerRadius="@dimen/margin10"
+    android:layout_margin="@dimen/margin10"
+    android:backgroundTint="@color/greenShade1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin5">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/baseline_person_24"
+            app:civ_border_color="@color/lightBlue"
+            app:civ_border_width="@dimen/margin2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/list_authorTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin8"
+            android:text="@string/author_name"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/textSize18"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+            app:layout_constraintStart_toEndOf="@+id/profile_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/list_quoteTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:lineSpacingExtra="@dimen/margin5"
+            android:maxLines="10"
+            android:scrollIndicators="right"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="@dimen/textSize18"
+            app:layout_constraintTop_toBottomOf="@+id/list_authorTxt" />
+
+        <LinearLayout
+            android:id="@+id/saveBtnLayout"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_bg"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin5"
+            app:layout_constraintStart_toStartOf="@+id/list_quoteTxt"
+            app:layout_constraintTop_toBottomOf="@+id/list_quoteTxt">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin19"
+                android:src="@drawable/baseline_save_alt_24" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/save"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize18" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/shareBtnLayout"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_bg"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin5"
+            app:layout_constraintEnd_toEndOf="@+id/list_quoteTxt"
+            app:layout_constraintTop_toBottomOf="@+id/list_quoteTxt">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin19"
+                android:src="@drawable/baseline_share_24" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/share"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize18" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>
